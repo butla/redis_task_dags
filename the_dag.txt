@@ -1,0 +1,72 @@
+       A
+      / \
+     B   C
+      \ /
+       D
+      /|\
+     E F G
+       |/
+       H
+
+runda 0
+=======
+
+zrobione: _
+
+przed A: _
+przed B: A
+przed C: A
+przed D: B C
+przed E: D
+przed F: D
+przed G: D
+przed H: F G
+
+po A: B C
+po B: D
+po C: D
+po D: E F G
+po E: _
+po F: H
+po G: H
+
+
+runda 1
+=======
+
+zrobione: A
+
+przed B: _
+przed C: _
+przed D: B C
+przed E: D
+przed F: D
+przed G: D
+przed H: F G
+
+po B: D
+po C: D
+po D: E F G
+po E: _
+po F: H
+po G: H
+
+
+runda 2
+=======
+
+zrobione: A B C
+
+przed D: _
+przed E: D
+przed F: D
+przed G: D
+przed H: F G
+
+po D: E F G
+po E: _
+po F: H
+po G: H
+
+itd.
+====
