@@ -11,4 +11,4 @@ I have different issues with the current task runners for Python:
 
 - rq: doesn't support DAGs of tasks
 - celery: buggy, convoluted
-- Airflow - really unflexible, needlessly heavyweight
+- Airflow - really unflexible (why can't I just define and run DAGs from code?), needlessly heavyweight

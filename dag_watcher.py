@@ -1,6 +1,8 @@
 import asyncio
 import contextvars
+import dataclasses
 import string
+from typing import Set
 
 import aioredis
 
@@ -77,7 +79,18 @@ async def dump_dag():
             print(node, ':', ' '.join(connected_nodes))
 
 
+@dataclasses.dataclass
+class TasksDag:
+    node_dependencies: Set[str]
+    node_successors: Set[str]
+
+
+async def _get_dag() -> TasksDag:
+    pass
+
+
 async def iterate_dag():
+    await _get_dag()
     print()
     print('TODO run the next task without dependencies - do that with lua through a redis queue, or a log')
     print('TODO update dependencies list - remove executed tasks, remove dependencies for successors')
